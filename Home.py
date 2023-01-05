@@ -30,7 +30,7 @@ col1, col2 = st.columns([1.5, 1.9])
 with col1:
     st.text(" ")
     st.text(" ")
-    st.image("images/my_photo.png", width=400)
+    st.image("images/my_photo_1.png", width=400)
 
 with col2:
     st.text(" ")
