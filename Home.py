@@ -64,3 +64,12 @@ footer = """
     </style>
     """
 st.markdown(footer, unsafe_allow_html=True)
+
+with st.sidebar:
+    with open("Resume.pdf", "rb") as pdf_file:
+        pdf_byte = pdf_file.read()
+
+    st.download_button(label="Download my resume",
+                       data=pdf_byte,
+                       file_name="pandas-clean-id-column.pdf",
+                       mime='application/octet-stream')
