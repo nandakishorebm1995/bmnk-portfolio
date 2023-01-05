@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from screeninfo import get_monitors, Enumerator
 
-for m in get_monitors():
+for m in get_monitors(Enumerator.Windows):
     monitor = m
 
 st.set_page_config(layout="wide")
