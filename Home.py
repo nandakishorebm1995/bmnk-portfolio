@@ -2,8 +2,8 @@ import streamlit as st
 import streamlit.components.v1 as components
 from screeninfo import get_monitors, Enumerator
 
-for m in get_monitors(Enumerator.Windows):
-    monitor = m
+# for m in get_monitors():
+#    monitor = m
 
 st.set_page_config(layout="wide")
 
@@ -23,14 +23,14 @@ with col1:
 with col2:
     st.text(" ")
     with st.sidebar:
-        components.html(embed_component['linkedin'], height=round(0.287 * monitor.height))
+        components.html(embed_component['linkedin'], height=310)
 
 col1, col2 = st.columns([1.5, 1.9])
 
 with col1:
     st.text(" ")
     st.text(" ")
-    st.image("images/my_photo.png", width=round(0.2083 * monitor.width))
+    st.image("images/my_photo.png", width=400)
 
 with col2:
     st.text(" ")
