@@ -1,5 +1,9 @@
 import streamlit as st
 import streamlit.components.v1 as components
+from screeninfo import get_monitors
+
+for m in get_monitors():
+    monitor = m
 
 st.set_page_config(layout="wide")
 
@@ -11,7 +15,7 @@ embed_component = {'linkedin': """<script src="https://platform.linkedin.com/bad
 type="text/javascript"></script><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" 
 data-theme="dark" data-type="VERTICAL" data-vanity="nanda-kishore-bellam-muralidhar-25594b186" data-version="v1"><a 
 class="badge-base__link LI-simple-link" href="https://de.linkedin.com/in/nanda-kishore-bellam-muralidhar-25594b186
-?trk=profile-badge">Nanda Kishore Bellam Muralidhar</a></div>""" }
+?trk=profile-badge">Nanda Kishore Bellam Muralidhar</a></div>"""}
 
 with col1:
     st.title("Nanda Kishore Bellam Muralidhar")
@@ -19,14 +23,14 @@ with col1:
 with col2:
     st.text(" ")
     with st.sidebar:
-        components.html(embed_component['linkedin'], height=310)
+        components.html(embed_component['linkedin'], height=round(0.287 * monitor.height))
 
 col1, col2 = st.columns([1.5, 1.9])
 
 with col1:
     st.text(" ")
     st.text(" ")
-    st.image("images/my_photo.png", width=400)
+    st.image("images/my_photo.png", width=round(0.2083 * monitor.width))
 
 with col2:
     st.text(" ")
