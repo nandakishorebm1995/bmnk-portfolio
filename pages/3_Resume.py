@@ -21,8 +21,10 @@ def show_pdf(file_path):
     # pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="850" height="800" ' \
     #               f'type="application/pdf"></iframe> '
 
-    pdf_display = F'<embed src="data:application/pdf;base64,{base64_pdf}" width="850" height="1000" ' \
-                  F'type="application/pdf"> '
+    # pdf_display = F'<embed src="data:application/pdf;base64,{base64_pdf}" width="850" height="1000" ' \
+    #               F'type="application/pdf"> '
+
+    pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe> '
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 
