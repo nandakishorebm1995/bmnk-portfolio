@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-from screeninfo import get_monitors
+from screeninfo import get_monitors, Enumerator
 
 for m in get_monitors():
     monitor = m
